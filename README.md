@@ -22,7 +22,7 @@ Follow the [install instructions](https://github.com/filipw/dotnet-script/#insta
 Usage
 -----
 
-PocosGenerator works in an opt-in style, regarding you database tables. By default all tables are ignored, you have to manually enable the ones you want to generate a POCO for.  
+PocosGenerator works in an opt-in style, regarding your database tables. By default all tables are ignored, you have to manually enable the ones you want to generate a POCO for.  
 
 In the PocosGenerator.csx file, edit the following section:
 
