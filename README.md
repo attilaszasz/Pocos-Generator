@@ -8,7 +8,7 @@ When all you want are Pocos
 If you prefer to work with a micro-orm like [Dapper](https://github.com/StackExchange/Dapper), but hate manually writing POCO classes for your tables, this is the right tool for you.  
 A port of [EZPoco T4 templates](https://github.com/davidsavagejr/ezpoco) to .Net Core 2.0+ using [dotnet-script](https://github.com/filipw/dotnet-script/).  
 
-Generates POCO classes from you database tables and views. For SQL Server, also generates a class with names of stored procedures, and a class with the names and columns of table-valued parameters.  
+Generates POCO classes from your database tables and views. For SQL Server, also generates a class with names of stored procedures, and a class with the name and columns of table-valued parameters.  
 
 Getting Started
 ===============
@@ -22,7 +22,7 @@ Follow the [install instructions](https://github.com/filipw/dotnet-script/#insta
 Usage
 -----
 
-PocosGenerator work in an opt-in style, regarding you database tables. By default all tables are ignored, you have to manually enable the ones you want to generate a POCO for.  
+PocosGenerator works in an opt-in style, regarding you database tables. By default all tables are ignored, you have to manually enable the ones you want to generate a POCO for.  
 
 In the PocosGenerator.csx file, edit the following section:
 
@@ -68,8 +68,8 @@ Parameters are in form of `param:value`, any order.
  schema    | null | Restrict to a specific schema (ex. "dbo.").
  classprefix    | null | Add a prefix to the generated class names (ex. "Accounting*TableName*").
  classsufix    | null | Add a sufix to the generated class names (ex. "*TableName*Reporting").
- spclass    | null | Name for the class holding the stored procedures. Not generated if null.
- tvpclass    | null | Name for the class holding the table valued parameters. Not generated if null.
+ spclass    | null | Name of the class holding the stored procedures. Not generated if null.
+ tvpclass    | null | Name of the class holding the table valued parameters. Not generated if null.
 
 You can also run it from [Visual Studio Code](https://code.visualstudio.com/). Install the [C# for Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) plugin.  
 To create the launch.json file for you environment, first run this command in the folder containing the .csx files:
@@ -78,10 +78,10 @@ To create the launch.json file for you environment, first run this command in th
 dotnet script init
 ```
 
-When running from VS Code, set you options in the PocosGenerator.csx file, this section:
+When running from VS Code, set your options in the PocosGenerator.csx file, this section:
 
 ```C#
-if (!Args.Any()){ 
+if (!Args.Any()){
     options.Output = "DbModels.cs";
     options.ConfigFilePath = @"..\Config\connectionstrings.json";
     options.Namespace = "Db.Models";

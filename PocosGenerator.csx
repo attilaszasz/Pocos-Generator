@@ -4,7 +4,7 @@
 //when running from VS Code, set your options here
 if (!Args.Any()){ 
     options.Output = "DbModels.cs";
-    options.ConfigFilePath = @"..\..\..\Config\connectionstrings.json";
+    options.ConfigFilePath = @"..\Config\connectionstrings.json";
     options.Namespace = "Db.Models";
     options.ConnectionStringName = "ConnectionStrings:Data";
 	options.SpClass = "spData";
@@ -21,8 +21,6 @@ if (generator.ReadSchema()){
     /*
 		generator.Tables["tablename"].Ignore = false;
 	*/
-
-	generator.Tables["Users"].Ignore = false;
 	
 	/*
 		// Tweak Schema
