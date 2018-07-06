@@ -70,6 +70,7 @@ Parameters are in form of `param:value`, any order.
  classsufix    | null | Add a sufix to the generated class names (ex. "*TableName*Reporting").
  spclass    | null | Name of the class holding the stored procedures. Not generated if null.
  tvpclass    | null | Name of the class holding the table valued parameters. Not generated if null.
+ dapper  | false | Decorate POCOs with attributes for [Dapper.Contrib](https://github.com/StackExchange/Dapper/tree/master/Dapper.Contrib). [Nuget package](https://www.nuget.org/packages/Dapper.Contrib/) must be included in your project.
 
 You can also run it from [Visual Studio Code](https://code.visualstudio.com/). Install the [C# for Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) plugin.  
 To create the launch.json file for you environment, first run this command in the folder containing the .csx files:
