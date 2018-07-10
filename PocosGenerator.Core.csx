@@ -98,7 +98,7 @@ public class PocosGenerator {
 			builder.AppendLine("    /// </remarks>");
 			builder.AppendLine($"    public static partial class {_options.SpClass} {{");
 			foreach (string sp in splist){
-				builder.AppendLine($"        public const string {CleanUpStoredProcName(sp)} = \"{sp}\"");
+				builder.AppendLine($"        public const string {CleanUpStoredProcName(sp)} = \"{sp}\";");
 			}
 			builder.AppendLine("    }");
 		}
@@ -121,7 +121,7 @@ public class PocosGenerator {
 					builder.AppendLine($"            \"{column}\",");
 
 				}
-				builder.AppendLine("            }");
+				builder.AppendLine("            };");
 				builder.AppendLine("        }");
 			}
 			builder.AppendLine("    }");
